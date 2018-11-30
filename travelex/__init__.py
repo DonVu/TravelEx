@@ -27,5 +27,25 @@ def create_app(test_config=None):
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+    
+    @app.route('/')
+    def main_page():
+        return 'Main Page'
+    
+    @app.route('/flights')
+    def flights():
+        return 'Flights page'
+
+    @app.route('/hotels')
+    def hotels():
+        return 'Hotels page'
+
+    @app.route('/events')
+    def events():
+        return 'Events page'
+
+    @app.route('/suggestions')
+    def suggestions():
+        return 'Suggestions page'
 
     return app
