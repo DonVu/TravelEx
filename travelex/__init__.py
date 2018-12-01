@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, url_for, render_template
 
 def create_app(test_config=None):
     # create and configure the app
@@ -30,8 +30,8 @@ def create_app(test_config=None):
     
     @app.route('/')
     def main_page():
-        return 'Main Page'
-    
+        return render_template('index.html')
+
     @app.route('/flights')
     def flights():
         return 'Flights page'
