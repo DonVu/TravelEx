@@ -1,0 +1,147 @@
+ html,body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices*/
+
+}
+
+  body {
+  padding-top: 250px;
+
+}
+
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+  }
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+
+.bg-purple { background-color: #6f42c1; }
+
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+.bg-purple {
+  background-color: #6f42c1;
+  background: rgba(0,0,0,0.5)}
+
+/*********************************************************/
+
+@keyframes  mymove {
+    from { background-image: url("../images/SANTO_CANAVESOIA_01.jpg");}
+    to   { background-image: url("../images/image2.jpg");}
+  }
+.background-image{
+  animation: mymove 5s infinite;
+  background-size: cover;
+
+}
+
+
+/*********************************************************/
+
+/* Now lets do a Grid-based layout */
+
+@supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .deals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+.deals {
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 80%;
+}
+.sale-item {
+  display: flex;
+  flex-flow: column;
+  border:  1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.sale-item > h1 {
+  margin: 1rem 1rem 0;
+}
+.sale-item > ul {
+  margin: 0 0 1rem;
+}
+.sale-item > p {
+  margin: 0.25em 1rem 1rem;
+}
+.sale-item > img {
+  order: -1;
+  align-self: center;
+}
+.sale-item > button {
+  margin-top: auto;
+  background: teal;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
