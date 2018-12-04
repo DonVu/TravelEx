@@ -34,18 +34,14 @@ def create_app(test_config=None):
 
     @app.route('/flights')
     def flights():
-        return 'Flights page'
+        return render_template('flights.html')
 
     @app.route('/hotels')
     def hotels():
-        return 'Hotels page'
+        return render_template('hotels.html')
 
-    @app.route('/events')
-    def events():
-        return 'Events page'
-
-    @app.route('/suggestions')
-    def suggestions():
-        return 'Suggestions page'
+    @app.route('/things-to-do')
+    def things_to_do():
+        return render_template('things-to-do.html')
 
     return app
