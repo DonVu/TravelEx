@@ -241,11 +241,8 @@
 		</div>
 
 	</section>
-	<div id="mylist" style="background-color:#30417F">
-		<h1> Your destination is: {{destination}}</h1>
-		<h1> Your source is: {{origin}}</h1>
-		<h1> Your source is: {{departdate}}</h1>
-		<h1> Your source is: {{returndate}}</h1>
+	<div id="results" style="background-color:#30417F">
+		
 	</div>
 
 
@@ -260,6 +257,60 @@
 <script src="{{ url_for('static',filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
 <script src="{{ url_for('static',filename='plugins/easing/easing.js')}}"></script>
 <script src="{{ url_for('static',filename='js/custom.js')}}"></script>
+
+<script type="text/javascript">
+	var myData = [
+  {
+	"source": "LAX",
+	"destination": "SNA",
+	"departDate": "12/08/18",
+    "returnDate": "12/10/18",
+	"image":"mydata11.png",
+	"cost1": "$579",
+	"image":"mydata12.png",
+	"cost2": "$600",
+	"image":"mydata13.png",
+	"cost3": "$655"
+  },
+
+  {
+	"source": "LAX",
+	"destination": "DFW",
+	"departDate": "12/08/18",
+    "returnDate": "12/10/18",
+	"image":"mydata21.png",
+	"cost1": "$158",
+	"image":"mydata22.png",
+	"cost2": "$210",
+	"image":"mydata23.png",
+	"cost3": "$231"
+  },
+
+]
+var ori={{origin|tojson}};
+var dest={{destination|tojson}};
+var dpt={{departdate|tojson}};
+var rtr={{returndate|tojson}};
+
+$(document).ready(function(){
+
+	$.each(myData,function(index,data){
+		if(((data.source)==ori) &&  ((data.destination)==dest)
+		&& ((data.returnDate)==rtr) && ((data.departDate)==dpt)){
+			alert("Inside if");
+			var1=$('<article>');
+			ar1.append($('<h1>',{'text':myData.image}));
+			ar1.appendTo(document.getElementById("results"));
+		}
+		else{
+			alert("Dont have any data.");
+		}
+	})
+
+});
+
+
+</script>
 
 
 </body>
