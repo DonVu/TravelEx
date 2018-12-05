@@ -242,7 +242,7 @@
 
 	</section>
 	<div id="results" style="background-color:#30417F">
-		
+
 	</div>
 
 
@@ -264,12 +264,12 @@
 	"source": "LAX",
 	"destination": "SNA",
 	"departDate": "12/08/18",
-    "returnDate": "12/10/18",
-	"image":"mydata11.png",
+  "returnDate": "12/10/18",
+	"image1":"{{url_for('static', filename='images/mydata1.1.JPG')}}",
 	"cost1": "$579",
-	"image":"mydata12.png",
+	"image2":"{{url_for('static', filename='images/mydata1.2.JPG')}}",
 	"cost2": "$600",
-	"image":"mydata13.png",
+	"image3":"{{url_for('static', filename='images/mydata1.3.JPG')}}",
 	"cost3": "$655"
   },
 
@@ -277,12 +277,12 @@
 	"source": "LAX",
 	"destination": "DFW",
 	"departDate": "12/08/18",
-    "returnDate": "12/10/18",
-	"image":"mydata21.png",
+  "returnDate": "12/10/18",
+	"image1":"{{url_for('static', filename='images/mydata2.1.JPG')}}",
 	"cost1": "$158",
-	"image":"mydata22.png",
+	"image2":"{{url_for('static', filename='images/mydata2.2.JPG')}}",
 	"cost2": "$210",
-	"image":"mydata23.png",
+	"image3":"{{url_for('static', filename='images/mydata2.3.JPG')}}",
 	"cost3": "$231"
   },
 
@@ -297,13 +297,22 @@ $(document).ready(function(){
 	$.each(myData,function(index,data){
 		if(((data.source)==ori) &&  ((data.destination)==dest)
 		&& ((data.returnDate)==rtr) && ((data.departDate)==dpt)){
-			alert("Inside if");
-			var1=$('<article>');
-			ar1.append($('<h1>',{'text':myData.image}));
-			ar1.appendTo(document.getElementById("results"));
+			var imag1 = new Image();
+			var imag2 = new Image();
+			var imag3 = new Image();
+
+			var cost1 = data.cost1;
+			imag1.src = data.image1;
+			imag2.src = data.image2;
+			imag3.src = data.image3;
+
+			document.getElementById("results").appendChild(imag1).setAttribute("class", "container my-0 p-3 bg-white rounded");
+			document.getElementById("results").appendChild(imag2);
+			document.getElementById("results").appendChild(imag3);
+
 		}
 		else{
-			alert("Dont have any data.");
+			//alert("Dont have any data.");
 		}
 	})
 
