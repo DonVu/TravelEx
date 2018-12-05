@@ -59,7 +59,7 @@
 						</div>
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="#">home</a></li>
+								<li class="main_nav_item"><a href="{{url_for('index')}}">home</a></li>
 								<li class="main_nav_item"><a href="contact.html">contact</a></li>
 							</ul>
 						</div>
@@ -153,8 +153,8 @@
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>discover</h1>
-							<h1>the world</h1>
+							<h1>Let's Go</h1>
+							<h1>Places</h1>
 						</div>
 					</div>
 				</div>
@@ -242,7 +242,19 @@
 
 	</section>
 	<div id="results" style="background-color:#30417F">
+		<h1 id ="titleResults"></h1><br>
+		<h3 id="cost1" style="text-align: center;"></h3><br>
+		<div id="results1" style="background-color:#FFFFFF;margin-left: 400px;margin-right: 400px;">
 
+		</div><br>
+		<h3 id="cost2" style="text-align: center;"></h3><br>
+		<div id="results2" style="background-color:#FFFFFF;margin-left: 400px;margin-right: 400px;">
+
+		</div><br>
+		<h3 id="cost3" style="text-align: center;"></h3><br>
+		<div id="results3" style="background-color:#FFFFFF;margin-left: 400px;margin-right: 400px;">
+
+		</div>
 	</div>
 
 
@@ -302,13 +314,22 @@ $(document).ready(function(){
 			var imag3 = new Image();
 
 			var cost1 = data.cost1;
+			var cost2 = data.cost2;
+			var cost3 = data.cost3;
+
 			imag1.src = data.image1;
 			imag2.src = data.image2;
 			imag3.src = data.image3;
 
-			document.getElementById("results").appendChild(imag1).setAttribute("class", "container my-0 p-3 bg-white rounded");
-			document.getElementById("results").appendChild(imag2);
-			document.getElementById("results").appendChild(imag3);
+			document.getElementById("results1").appendChild(imag1);
+			document.getElementById("results2").appendChild(imag2);
+			document.getElementById("results3").appendChild(imag3);
+
+			document.getElementById("cost1").append(cost1);
+			document.getElementById("cost2").append(cost2);
+			document.getElementById("cost3").append(cost3);
+
+			document.getElementById("titleResults").innerHTML("Best Filghts Results");
 
 		}
 		else{
