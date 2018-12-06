@@ -255,6 +255,10 @@
 		<h3 id="cost3" style="text-align: right;margin-right:400px;"></h3><br>
 		<div id="results3" style="background-color:#FFFFFF;margin-left: 400px;margin-right: 400px;">
 		</div><br><br>
+
+		<div style="justify-content:center;text-align:center;display:flex;">
+			<button type="button" id="button" >Search Again</button>
+		</div>
 	</div>
 
 
@@ -333,6 +337,10 @@ $(document).ready(function(){
 			document.getElementById("cost3").append(cost3);
 
 			document.getElementById("titleResults").append("Best Filghts Results");
+
+			document.getElementById("button").onclick=function(){
+				window.location.href="{{url_for('index')}}";
+			};
 
 		}
 		else{
