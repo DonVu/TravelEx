@@ -242,7 +242,8 @@
 
 	</section>
 	<div id="results" style="background-color:#30417F">
-		<h1 id ="titleResults"></h1><br>
+		<h1 id ="titleResults" style="text-align:center;"></h1><br>
+
 		<h3 id="cost1" style="text-align: center;"></h3><br>
 		<div id="results1" style="background-color:#FFFFFF;margin-left: 400px;margin-right: 400px;">
 
@@ -282,7 +283,8 @@
 	"image2":"{{url_for('static', filename='images/mydata1.2.JPG')}}",
 	"cost2": "$600",
 	"image3":"{{url_for('static', filename='images/mydata1.3.JPG')}}",
-	"cost3": "$655"
+	"cost3": "$655",
+	"adults": "1"
   },
 
   {
@@ -295,7 +297,8 @@
 	"image2":"{{url_for('static', filename='images/mydata2.2.JPG')}}",
 	"cost2": "$210",
 	"image3":"{{url_for('static', filename='images/mydata2.3.JPG')}}",
-	"cost3": "$231"
+	"cost3": "$231",
+	"adults":"1"
   },
 
 ]
@@ -303,12 +306,13 @@ var ori={{origin|tojson}};
 var dest={{destination|tojson}};
 var dpt={{departdate|tojson}};
 var rtr={{returndate|tojson}};
+var adlts={{adults|tojson}};
 
 $(document).ready(function(){
 
 	$.each(myData,function(index,data){
 		if(((data.source)==ori) &&  ((data.destination)==dest)
-		&& ((data.returnDate)==rtr) && ((data.departDate)==dpt)){
+		&& ((data.returnDate)==rtr) && ((data.departDate)==dpt) && ((data.adults)==adlts)){
 			var imag1 = new Image();
 			var imag2 = new Image();
 			var imag3 = new Image();
@@ -329,7 +333,7 @@ $(document).ready(function(){
 			document.getElementById("cost2").append(cost2);
 			document.getElementById("cost3").append(cost3);
 
-			document.getElementById("titleResults").innerHTML("Best Filghts Results");
+			document.getElementById("titleResults").append("Best Filghts Results");
 
 		}
 		else{

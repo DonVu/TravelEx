@@ -25,12 +25,14 @@ def flights():
       destination=request.form['destination']
       departdate=request.form['depart']
       returndate=request.form['return']
+      adults=request.form['adults']
       print(origin)
       print(destination)
       print(departdate)
       print(returndate)
+      print(adults)
     #return 'origin: '+ ori + 'destination: ' + dest + 'depart: '+ dp + 'return' + rt
-      return render_template('flightsdetails.html', origin=origin, destination=destination,departdate=departdate,returndate=returndate)
+      return render_template('flightsdetails.html', origin=origin, destination=destination,departdate=departdate,returndate=returndate,adults=adults)
     return render_template('flightsdetails.html')
 
 
