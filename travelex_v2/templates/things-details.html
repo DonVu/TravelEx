@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Travelex</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travelix Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static',filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='plugins/OwlCarousel2-2.2.1/animate.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main_styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/responsive.css') }}">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="social">
+							<ul class="social_list">
+								<li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="user_box ml-auto">
+							<div class="user_box_login user_box_link"><a href="#">login</a></div>
+							<div class="user_box_register user_box_link"><a href="#">register</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+						<div class="logo_container">
+							<div class="logo"><a href="#"><img src="images/logo.png" alt="">Travelex</a></div>
+						</div>
+						<div class="main_nav_container ml-auto">
+							<ul class="main_nav_list">
+
+								<li class="main_nav_item"><a href="{{ url_for('index')}}">home</a></li>
+								<li class="main_nav_item"><a href="contact.html">contact</a></li>
+							</ul>
+						</div>
+						<div class="content_search ml-lg-0 ml-auto">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							width="17px" height="17px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+								<g>
+									<g>
+										<g>
+											<path class="mag_glass" fill="#FFFFFF" d="M78.438,216.78c0,57.906,22.55,112.343,63.493,153.287c40.945,40.944,95.383,63.494,153.287,63.494
+											s112.344-22.55,153.287-63.494C489.451,329.123,512,274.686,512,216.78c0-57.904-22.549-112.342-63.494-153.286
+											C407.563,22.549,353.124,0,295.219,0c-57.904,0-112.342,22.549-153.287,63.494C100.988,104.438,78.439,158.876,78.438,216.78z
+											M119.804,216.78c0-96.725,78.69-175.416,175.415-175.416s175.418,78.691,175.418,175.416
+											c0,96.725-78.691,175.416-175.416,175.416C198.495,392.195,119.804,313.505,119.804,216.78z"/>
+										</g>
+									</g>
+									<g>
+										<g>
+											<path class="mag_glass" fill="#FFFFFF" d="M6.057,505.942c4.038,4.039,9.332,6.058,14.625,6.058s10.587-2.019,14.625-6.058L171.268,369.98
+											c8.076-8.076,8.076-21.172,0-29.248c-8.076-8.078-21.172-8.078-29.249,0L6.057,476.693
+											C-2.019,484.77-2.019,497.865,6.057,505.942z"/>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</div>
+
+						<form id="search_form" class="search_form bez_1">
+							<input type="search" class="search_content_input bez_1">
+						</form>
+
+						<div class="hamburger">
+							<i class="fa fa-bars trans_200"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<ul>
+				<li class="menu_item"><a href="#">home</a></li>
+				<li class="menu_item"><a href="about.html">about us</a></li>
+				<li class="menu_item"><a href="contact.html">contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Home Slider -->
+
+		<div class="home_slider_container">
+
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slider Item -->
+				<div class="owl-item home_slider_item">
+					<div class="home_slider_background" style="background-image: url({{ url_for('static', filename='images/home_sliders.jpg')}})"></div>
+
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+							<h1>Let's go</h1>
+							<h1>Places</h1>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slider Item -->
+				<div class="owl-item home_slider_item">
+					<div class="home_slider_background" style="background-image:url({{ url_for('static', filename='images/image2.jpg')}})"></div>
+
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+							<h1>Let's go</h1>
+							<h1>Places</h1>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slider Item -->
+				<div class="owl-item home_slider_item">
+					<div class="home_slider_background" style="background-image:url({{ url_for('static', filename='images/home_sliders.jpg')}})"></div>
+
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+							<h1>discover</h1>
+							<h1>the world</h1>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Home Slider Nav - Prev -->
+			<div class="home_slider_nav home_slider_prev">
+				<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					width="28px" height="33px" viewBox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
+					<defs>
+						<linearGradient id='home_grad_prev'>
+							<stop offset='0%' stop-color='#fa9e1b'/>
+							<stop offset='100%' stop-color='#8d4fff'/>
+						</linearGradient>
+					</defs>
+					<path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
+					M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
+					C22.545,2,26,5.541,26,9.909V23.091z"/>
+					<polygon class="nav_arrow" fill="#F3F6F9" points="15.044,22.222 16.377,20.888 12.374,16.885 16.377,12.882 15.044,11.55 9.708,16.885 11.04,18.219
+					11.042,18.219 "/>
+				</svg>
+			</div>
+
+			<!-- Home Slider Nav - Next -->
+			<div class="home_slider_nav home_slider_next">
+				<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="28px" height="33px" viewBox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
+					<defs>
+						<linearGradient id='home_grad_next'>
+							<stop offset='0%' stop-color='#fa9e1b'/>
+							<stop offset='100%' stop-color='#8d4fff'/>
+						</linearGradient>
+					</defs>
+				<path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
+				M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
+				C22.545,2,26,5.541,26,9.909V23.091z"/>
+				<polygon class="nav_arrow" fill="#F3F6F9" points="13.044,11.551 11.71,12.885 15.714,16.888 11.71,20.891 13.044,22.224 18.379,16.888 17.048,15.554
+				17.046,15.554 "/>
+				</svg>
+			</div>
+
+			<!-- Home Slider Dots -->
+
+			<div class="home_slider_dots">
+				<ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+					<li class="home_slider_custom_dot active"><div></div>01.</li>
+					<li class="home_slider_custom_dot"><div></div>02.</li>
+					<li class="home_slider_custom_dot"><div></div>03.</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Search -->
+
+	<section class="search">
+
+
+		<!-- Search Contents -->
+
+		<div class="container fill_height">
+			<div class="row fill_height">
+				<div class="col fill_height">
+
+					<!-- Search Tabs -->
+
+					<div class="search_tabs_container">
+						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='images/suitcase.png')}}" alt=""><span>hotels</span></div>
+						</div>
+					</div>
+
+					<!-- Search Panel -->
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<div id="mylist" style="background-color:#30417F">
+
+	</div>
+
+
+
+
+
+</div>
+
+<script src="{{ url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{ url_for('static',filename='styles/bootstrap4/popper.js')}}"></script>
+<script src="{{ url_for('static',filename='styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static',filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{ url_for('static',filename='plugins/easing/easing.js')}}"></script>
+<script src="{{ url_for('static',filename='js/custom.js')}}"></script>
+
+<script type="text/javascript">
+var loc1={{loc|tojson}};
+
+var myJSON = [{"city":"Los Angeles","hname":"The Beverly Hilton", "details":"The Beverly Hilton is a hotel located on an 8.9-acre property at the intersection of Wilshire and Santa Monica boulevards in Beverly Hills, California. The Beverly Hilton has hosted many awards shows, charity benefits,and entertainment and motion picture industry events, and is perhaps best known as the home of the annual Golden Globe Awards.",   "img":"https://www3.hilton.com/resources/media/hi/LAXBHHH/en_US/img/shared/full_page_image_gallery/main/HH_rodeodrive01_1270x560_FitToBoxSmallDimension_LowerCenter.jpg","cost":"$229","link":"https://www.beverlyhilton.com/"},
+               {"city":"Los Angeles","hname":"Loews Hollywood Hotel", "details":"Next to the Hollywood & Highland shopping and entertainment center, this high-end hotel is 2 miles from the Hollywood Hills and less than a mile from Route 101.Stylish rooms with oak furniture and classic Eames chairs offer free Wi-Fi, iPod docks and flat-screen TVs, plus Keurig coffeemakers. Some rooms offer city or hill views. Suites add sitting areas, and some have living rooms with wet bars. Room service is available.Amenities include a rooftop heated pool with poolside cabanas, a fitness center, and a spa. There's also a contemporary restaurant and a hip cocktail bar, plus a 24/7 business center and 76,000 sq ft of meeting space.","img":"https://m.discoverlosangeles.com/sites/default/files/media/loews-hollywood-hotelExteriorAngle-PhotoCredit-Gregory-Pierce.jpg","cost":"$267","link":"https://www.loewshotels.com/hollywood-hotel"},
+               {"city":"Los Angeles","hname":"Shore Hotel", "details":"Set across Highway 1 from the beach, this contemporary hotel is opposite the Santa Monica Pier and 0.4 miles from 3rd Street Promenade's shops and restaurants.The modern rooms offer free Wi-Fi, flat-screen TVs, and private patios or balconies (some with ocean views). Suites with ocean, city or garden views add living areas and pull-out sofas.Amenities include a 24-hour gym, and a heated outdoor pool and hot tub. There's also a casual restaurant serving Mexican dishes.","img":"https://images.trvl-media.com/hotels/14000000/13410000/13400400/13400329/52714fb2_z.jpg","cost":"$284","link":"https://www.shorehotel.com/"},
+							 {"city":"Los Angeles","hname":"Sheraton Gateway Los Angeles Hotel", "details":"Less than a mile from Los Angeles International Airport, this modern airport hotel is also 6.8 miles from Venice Beach.Straightforward rooms offer flat-screen TVs, Wi-Fi (fee) and desks. Club rooms include access to a lounge serving free continental breakfast and evening snacks. Suites add sitting areas.An airport shuttle is free. A casual brasserie serves breakfast, and a polished restaurant offers Californian cuisine for lunch and dinner. There's also a Starbucks coffee shop and a laid-back lobby lounge. Other amenities include a 24-hour exercise room and an outdoor pool, plus a business center and 50,000 sq ft of meeting space","img":"https://pix10.agoda.net/hotelImages/239/2390/2390_16062800480044160002.png?s=1024x768","cost":"$98","link":"https://www.marriott.com/hotels/travel/laxsi-sheraton-gateway-los-angeles-hotel/"},
+							{"city":"Los Angeles","hname":"The Dunbar Hotel", "details":"The Dunbar Hotel, originally known as the Hotel Somerville, was the focal point of the Central Avenue African-American community in Los Angeles, California, during the 1930s and 1940s. Built in 1928, it was known for its first year as the Hotel Somerville. Upon its opening, it hosted the first national convention of the National Association for the Advancement of Colored People (NAACP) to be held in the western United States. In 1930, the hotel was renamed the Dunbar, and it became the most prestigious hotel in LA's African-American community.","img":"https://upload.wikimedia.org/wikipedia/commons/1/1d/Somerville_Hotel%2C_Los_Angeles.JPG","cost":"$50","link":"https://www.laconservancy.org/locations/dunbar-hotel"},
+						  {"city":"San Diego","hname":"LA PENSIONE HOTEL", "details":"Set in Little Italy, this polished hotel is a mile from the vibrant Gaslamp Quarter, 3 miles from the San Diego Zoo and 4 miles from Old Town San Diego State Historic Park.Featuring high-thread-count linens and vintage photographs, the snug, modern rooms offer free Wi-Fi, flat-screen TVs and minifridges.Continental breakfast is complimentary. There's a trendy Italian restaurant with a courtyard, and a relaxed cafe. Other amenities include a spa, a gym, and a sleek lobby lounge with a fireplace.","img":"https://media-cdn.tripadvisor.com/media/photo-s/04/b6/ca/a4/la-pensione.jpg","cost":"$149","link":"http://www.lapensionehotel.com/"},
+              {"city":"San Diego","hname":"Manchester Grand Hyatt San Diego", "details":"Surrounded by shops and restaurants along San Diego Bay, this high-end hotel is 9 minutes' walk from the San Diego Convention Center and 3 miles from San Diego International Airport.Featuring floor-to-ceiling windows with bay or city views, upscale rooms offer free Wi-Fi and flat-screens; studios add pull-out sofas. Club rooms provide access to a private lounge serving complimentary breakfast, while suites come with kitchenettes and living rooms. Room service is available.Dining options include a seafood restaurant, a buffet eatery with a terrace, and a rooftop lounge and bar. There's also a spa and a gym, as well as 2 outdoor pools.","img":"https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2016/10/21/1145/Manchester-Grand-Hyatt-San-Diego-P166-Exterior.adapt.16x9.1920.1080.jpg","cost":"$168","link":"https://www.hyatt.com/en-US/hotel/california/manchester-grand-hyatt-san-diego/sanrs"},
+							{"city":"San Diego","hname":"Best Western Plus Island Palms Hotel & Marina", "details":"Housed in 3 separate buildings, this waterfront resort hotel on Shelter Island overlooks Shoreline Park.Casual rooms (some with private balconies) feature microwaves, minifridges, free Wi-Fi and flat-screen TVs with premium channels. Suites add kitchens and extra living spaces.Amenities include a patio, tennis courts, 2 outdoor pools and 2 hot tubs, plus a casual restaurant. Freebies include bike rentals.","img":"https://images.cdn.uniqueway.com/uploads/2016/06/8f4f3a3d-dac3-43bb-b545-00ffb9cdb275.jpg","cost":"$125","link":"https://www.islandpalms.com/"},
+						  {"city":"Irvine","hname":"Hotel Irvine", "details":"This modern hotel is 1.9 miles from both John Wayne Airport and Universal Studios Hollywood.Contemporary rooms provide free Wi-Fi and 42-inch flat-screen TVs, along with Bluetooth speakers and desks. Upgraded rooms have balconies. Suites add dining tables and pull-out sofas; some have wet bars, city views, pianos and/or whirlpool tubs.An airport shuttle is free. There's an airy American restaurant with a patio and a fire pit, a bar with live music, and a convenience store/snack bar. Other amenities include meeting space, an outdoor pool and a gym, plus a 12th-floor club lounge with breakfast, snacks and city views.","img":"https://exp.cdn-hotels.com/hotels/1000000/10000/600/506/cbe80204_z.jpg","cost":"111","link":"https://www.hotelirvine.com/"},
+						  {"city":"Irvine","hname":"Wyndham Irvine-Orange County Airport", "details":"This contemporary airport hotel is 2 miles from John Wayne Airport, 2.4 miles from the Segerstrom Center for the Arts and 6.6 miles from Balboa Island.The refined rooms have free Wi-Fi and flat-screen TVs with premium channels, plus desks and coffeemakers. Suites add separate living areas with pull-out sofas, while club rooms allow access to a lounge (weekdays only) with included breakfast and evening snacks.There's a restaurant offering Californian cuisine, as well as a free airport shuttle. Other amenities include an indoor pool, a whirlpool, a sports court and a fitness center, plus a 24-hour business center and 11 meeting/event rooms.","img":"https://media-cdn.tripadvisor.com/media/photo-s/05/d4/eb/5f/wyndham-irvine-orange.jpg","cost":"107","link":"https://www.wyndhamirvine.com/"}];
+
+// var myObj = JSON.parse(myJSON);
+var loc1={{loc|tojson}};
+
+var count=0;
+$(document).ready(function(){
+
+      $.each(myJSON, function(index, data) {
+
+
+         if ((data.city) == loc1){
+
+            var ar1= $('<article>');
+
+            ar1.append($('<h1>',{
+            'text': data.hname
+            }));
+            var img = '<img src="'+data.img+'" class="container"/>';
+            ar1.append(img);
+            ar1.append($('<p>',{
+            'text': data.details
+            }));
+						var pri=$('<h1>');
+						pri.append($('<strong>',{
+						'text':data.cost
+				   	}));
+						ar1.append(pri);
+						var button='<a target="_blank" role="button" href="'+data.link+'" class="btn btn-success btn-lg">View Details</a>';
+					  ar1.append(button);
+
+
+         // ar1.appendTo(document.body);
+        ar1.appendTo(document.getElementById("mylist"));
+
+        document.getElementsByTagName("article")[0].setAttribute("class", "container my-0 p-3 bg-white rounded shadow-sm");
+				if (count > 0)
+				{
+					document.getElementsByTagName("article")[count].setAttribute("class", "container my-3 p-3 bg-white rounded shadow-sm");
+				}
+
+              count++;
+      }
+    })
+  });
+
+	function goBack() {
+  history.back();
+  }
+
+ </script>
+
+</body>
+
+</html>

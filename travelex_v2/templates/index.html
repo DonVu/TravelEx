@@ -314,10 +314,15 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="things" method="POST" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
+
+								<select name="location" id="location" class="destination search_input" required="required">
+								  <option>Los Angeles</option>
+								  <option>San Diego</option>
+								  <option>Irvine</option>
+								</select>
 							</div>
 							<div class="search_item">
 								<div>check in</div>
