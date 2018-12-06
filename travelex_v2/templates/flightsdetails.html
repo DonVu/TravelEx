@@ -362,6 +362,7 @@ $(document).ready(function(){
 	$.each(myData,function(index,data){
 		if(((data.source)==ori) &&  ((data.destination)==dest)
 		&& ((data.returnDate)==rtr) && ((data.departDate)==dpt) && ((data.adults)==adlts)){
+
 			var imag1 = new Image();
 			var imag2 = new Image();
 			var imag3 = new Image();
@@ -383,7 +384,7 @@ $(document).ready(function(){
 			document.getElementById("cost2").append(cost2);
 			document.getElementById("cost3").append(cost3);
 
-			document.getElementById("titleResults").append("Best Filghts Results");
+			document.getElementById("titleResults").append("Best Flights Results");
 
 			document.getElementById("button1").onclick=function(){
 				window.location.href="{{url_for('index')}}";
@@ -396,7 +397,10 @@ $(document).ready(function(){
 		}
 		else{
 			//alert("Dont have any data.");
+			//found=false;
+			//continue;
 		}
+
 	})
 
 });
