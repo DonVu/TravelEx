@@ -13,7 +13,7 @@ def things():
     if request.form.get('location'):
       loc=request.form['location']
       print(loc)
-      return render_template("hoteldetails.html",loc=loc)
+      return render_template("things-details.html",loc=loc)
     return render_template("things-details.html")
 
 @app.route("/hotels", methods=['POST'])
