@@ -257,7 +257,8 @@
 		</div><br><br>
 
 		<div style="justify-content:center;text-align:center;display:flex;">
-			<button type="button" id="button" style="border-radius:18px;">Search Again</button>
+			<button type="button" id="button1" style="border-radius:18px;">Search Again</button>
+			<button type="button" id="button2" style="border-radius:18px;">Live Search</button>
 		</div><br><br>
 	</div>
 
@@ -384,8 +385,12 @@ $(document).ready(function(){
 
 			document.getElementById("titleResults").append("Best Filghts Results");
 
-			document.getElementById("button").onclick=function(){
+			document.getElementById("button1").onclick=function(){
 				window.location.href="{{url_for('index')}}";
+			};
+
+			document.getElementById("button2").onclick=function(){
+				window.location.href="https://www.expedia.com/Flights";
 			};
 
 		}
