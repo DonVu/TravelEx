@@ -13,7 +13,7 @@ To install:
     pip install -r requirements.txt
     ```
 4. Navigate to travelex_v2/ folder
-5. run the application with this command:
+5. Run the application with this command:
     ```
     python app.py
     ```
